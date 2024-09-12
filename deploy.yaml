@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prt-deploy
@@ -13,6 +13,6 @@ spec:
       containers:
         - name: prtcontainer
           image: atul8121990/prtproject
-selector:
-  matchLabels:
-    app: myapp
+  selector:
+    matchLabels:
+      app: myapp
