@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: prtservice
 spec:
-  kind: NodePort
+  type: NodePort
   selector:
     app: myapp
   ports:
