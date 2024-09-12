@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prt-deploy
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: demopod
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: prtcontainer
+          image: atul8121990/prtproject
+selector:
+  matchLabels:
+    app: myapp
